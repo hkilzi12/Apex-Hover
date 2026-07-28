@@ -1,0 +1,266 @@
+.ProductGrid {
+	display: grid;
+	width: 45%;
+	margin: 5em auto;
+	grid-template: repeat(6, auto) / repeat(2, 1fr);
+	border: 1px solid black;
+	justify-content: center;
+	margin-block: 5em;
+}
+.ProductBox {
+	text-align: left;
+}
+.ProductBox.a {
+	grid-row: 1 / span 3;
+	grid-column: 1 / span 1;
+	background-color: #f6f7f6;
+	border-right: 1px solid black;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+.ProductBox.a img {
+	width: calc(100% - 2px);
+	height: auto;
+}
+.ProductBox.b {
+	grid-row: 1 / span 1;
+	grid-column: 2 / span 1;
+	border-bottom: none;
+	height: auto;
+	padding-bottom: 8em;
+}
+.ProductBox.b h1 {
+	font-size: 32px;
+	line-height: 0.1px;
+	padding-top: 0.2em;
+}
+.ProductBox.b h3 {
+	font-family: "Courier New", monospace;
+	font-weight: 400;
+	font-size: 19.2px;
+	line-height: 0em;
+	padding-top: 0.7em;
+}
+.ProductBox.b h1,
+.ProductBox.b h3 {
+	padding-left: 0.5rem;
+}
+.ProductBox.c {
+	grid-row: 2 / span 1;
+	grid-column: 2 / span 1;
+	justify-items: center;
+	align-content: center;
+}
+.ProductBox.c form {
+	display: flex;
+	flex-direction: column;
+	width: 90%;
+}
+
+.ProductBox.c button {
+	height: 3em;
+	background-color: lightgrey;
+	border: 1px solid black;
+	border-radius: 5px;
+	cursor: pointer;
+	font-family: "Courier New", "comic sans ms";
+	font-size: 18px;
+}
+
+.ProductBox.c button:hover {
+	background-color: grey;
+	transition: background-color 0.2s ease;
+}
+
+.ProductBox.d {
+	grid-row: 3 / span 1;
+	grid-column: 2 / span 1;
+	min-height: 12em;
+	overflow-y: auto;
+	height: 195.96px;
+}
+
+details {
+	width: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+summary {
+	cursor: pointer;
+	font-weight: bold;
+	padding: 0.6em;
+}
+
+details p {
+	padding: 0.8em;
+	margin: 0;
+}
+
+.DetailsInformation {
+	border: 1px solid black;
+	border-right: none;
+	border-left: none;
+}
+
+.DetailsShipping {
+	border-bottom: 1px solid black;
+}
+
+ul {
+	margin-top: 0.3em;
+}
+
+@media only screen and (max-width: 1440px) {
+	.ProductGrid {
+		width: 75%;
+	}
+	.ProductBox.c form {
+		padding-bottom: 0.6em;
+	}
+	.ProductBox.c button {
+		font-size: 17px;
+		height: 2.9em;
+	}
+	ul {
+		margin-top: 0.1em;
+	}
+}
+@media only screen and (max-width: 1024px) {
+	.ProductBox.c button {
+		font-size: 16px;
+		height: 2.8em;
+	}
+	.ProductBox.b {
+		padding-bottom: 6em;
+	}
+	summary {
+		font-size: 14px;
+		padding-top: 0.6em;
+		padding-bottom: 0.3em;
+	}
+	ul {
+		margin-top: 0.3em;
+		font-size: 14px;
+		padding-left: 2.5em;
+	}
+}
+@media only screen and (max-width: 768px) {
+	.ProductGrid {
+		display: grid;
+		width: 85%;
+	}
+	.ProductBox.c button {
+		font-size: 15px;
+		height: 2.8em;
+	}
+	.ProductBox.b {
+		padding-bottom: 6em;
+	}
+	summary {
+		font-size: 13px;
+	}
+	ul {
+		margin-top: 0.3em;
+		font-size: 13px;
+	}
+	.ProductBox.b h1 {
+		font-size: 27px;
+	}
+	.ProductBox.b h3 {
+		font-size: 18px;
+	}
+}
+@media only screen and (max-width: 425px) {
+	.ProductGrid {
+		border: none;
+		margin-top: 3em;
+		margin-bottom: 0em;
+	}
+	.ProductBox.a {
+		grid-row: 1 / span 1;
+		grid-column: 1 / span 2;
+		border: 1px solid black;
+	}
+	.ProductBox.b {
+		grid-row: 2 / span 1;
+		grid-column: 1 / span 2;
+		border-right: 1px solid black;
+		border-left: 1px solid black;
+	}
+	.ProductBox.c {
+		grid-row: 3 / span 1;
+		grid-column: 1 / span 2;
+		border-right: 1px solid black;
+		border-left: 1px solid black;
+	}
+	.ProductBox.d {
+		grid-row: 4 / span 1;
+		grid-column: 1 / span 2;
+	}
+	.DetailsInformation {
+		border: 1px solid black;
+		border-bottom: none;
+		width: calc(100% - 2px);
+	}
+	.DetailsShipping {
+		border: 1px solid black;
+		width: calc(100% - 2px);
+	}
+	ul {
+		margin-bottom: 0em;
+		padding-bottom: 0.3em;
+	}
+}
+@media only screen and (max-width: 375px) {
+	.ProductGrid {
+		width: 90%;
+	}
+
+	.ProductBox.b {
+		padding-bottom: 4em;
+	}
+	.ProductBox.b h1 {
+		font-size: 24px;
+	}
+	.ProductBox.b h3 {
+		font-size: 16px;
+	}
+	.ProductBox.c button {
+		font-size: 14px;
+		height: 2.5em;
+	}
+	summary {
+		font-size: 12px;
+	}
+	ul {
+		font-size: 12px;
+	}
+}
+@media only screen and (max-width: 320px) {
+	.ProductGrid {
+		width: 90%;
+	}
+
+	.ProductBox.b {
+		padding-bottom: 4em;
+	}
+	.ProductBox.b h1 {
+		font-size: 22px;
+	}
+	.ProductBox.b h3 {
+		font-size: 15px;
+	}
+	.ProductBox.c button {
+		font-size: 14px;
+		height: 2.5em;
+	}
+	summary {
+		font-size: 12px;
+	}
+	ul {
+		font-size: 12px;
+	}
+}

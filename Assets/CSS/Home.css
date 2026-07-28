@@ -1,0 +1,251 @@
+/* #region Our Story Section*/
+.OurStory {
+	display: flex;
+	justify-content: center;
+	margin: 7em auto 0em;
+	max-height: 30em;
+	width: 80%;
+}
+
+.OurStory-text {
+	width: 55%;
+	background-color: #f5f8fa;
+	padding: 0em 1.5em;
+	border: 1px solid #0d1b33;
+	border-radius: 25px 0px 0px 25px;
+	border-right: none;
+	overflow-y: auto;
+}
+
+.OurStory-text h2 {
+	background-color: #f5f8fa;
+	margin: 0;
+	text-align: left;
+	font-size: 30px;
+	padding: 0.6em 1em 0em 0.4em;
+}
+
+.OurStory-text p {
+	margin: 0;
+	background-color: #f5f8fa;
+	text-align: left;
+	max-height: 24em;
+	overflow-y: visible;
+	padding: 0.5m 1.2em 0em 1.2em;
+	font-size: 19px;
+	line-height: 2.2;
+	text-indent: 2em;
+}
+
+.OurStory img {
+	width: 45%;
+	height: auto;
+	max-height: 31.55em;
+	object-fit: cover;
+	object-position: center;
+	border: 1px solid #0d1b33;
+	border-radius: 0px 25px 25px 0px;
+	border-left: none;
+}
+/*  #endregion Our Story Section*/
+
+/*  #region How It Works Section*/
+.HowItWorks {
+	display: flex;
+	justify-content: center;
+	margin: 4em auto 8em;
+	max-height: 30em;
+	width: 80%;
+}
+
+.HowItWorks-text {
+	width: 55%;
+	max-height: 31.55em;
+	background-color: #f5f8fa;
+	padding: 0em 1.5em;
+	border: 1px solid #12233c;
+	border-left: none;
+	border-radius: 0px 25px 25px 0px;
+	overflow-y: auto;
+}
+
+.HowItWorks-text h2 {
+	background-color: #f5f8fa;
+	margin: 0;
+	font-size: 30px;
+	text-align: left;
+	padding: 0.6em 1em 0em 0.4em;
+}
+
+.HowItWorks-text p {
+	margin: 0;
+	background-color: #f5f8fa;
+	text-align: left;
+	max-height: 24em;
+	overflow-y: visible;
+	padding: 0.5m 1.2em 0em 1.2em;
+	font-size: 19px;
+	line-height: 2.2;
+	text-indent: 2em;
+}
+
+.HowItWorks img {
+	width: 45%;
+	height: auto;
+	max-height: 31.55em;
+	object-fit: cover;
+	object-position: center;
+	border: 1px solid #0d1b33;
+	border-right: none;
+	border-radius: 25px 0px 0px 25px;
+}
+
+/*  #endregion How It Works Section*/
+
+@media only screen and (max-width: 1440px) {
+	.OurStory-text p {
+		font-size: 16px;
+	}
+	.HowItWorks-text p {
+		font-size: 16px;
+	}
+	.OurStory {
+		width: 90%;
+		margin: 6em auto 0em;
+	}
+	.HowItWorks {
+		width: 90%;
+	}
+}
+
+@media only screen and (max-width: 1024px) {
+	.OurStory {
+		width: 99%;
+		margin: 5em auto 0em;
+	}
+	.OurStory-text h2 {
+		font-size: 25px;
+	}
+	.OurStory-text p {
+		font-size: 14px;
+	}
+	.HowItWorks {
+		width: 99%;
+		margin-bottom: 5em;
+	}
+	.HowItWorks-text h2 {
+		font-size: 25px;
+	}
+	.HowItWorks-text p {
+		font-size: 14px;
+	}
+}
+
+@media only screen and (max-width: 768px) {
+	.OurStory,
+	.HowItWorks {
+		flex-direction: column;
+		width: 90%;
+		height: auto;
+		max-height: none;
+		align-items: center;
+		border: 1px solid #12233c;
+		border-radius: 25px;
+	}
+	.OurStory-text h2,
+	.HowItWorks-text h2 {
+		font-size: 22px;
+		padding-top: 0.4em;
+	}
+	.OurStory-text p,
+	.HowItWorks-text p {
+		font-size: 14px;
+		max-height: none;
+		line-height: 1.7;
+		padding-bottom: 0.3em;
+	}
+	.OurStory-text,
+	.HowItWorks-text {
+		border: none;
+		border-top: 1px solid #12233c;
+		border-radius: 0px 0px 25px 25px;
+		width: auto;
+		max-height: none;
+	}
+	.OurStory img,
+	.HowItWorks img {
+		width: 100%;
+		height: 300px;
+		object-fit: cover;
+		border: none;
+		border-radius: 25px 25px 0px 0px;
+	}
+	.OurStory img {
+		order: -1;
+	}
+	.HowItWorks {
+		margin-top: 4em;
+	}
+}
+@media only screen and (max-width: 425px) {
+	.OurStory,
+	.HowItWorks {
+		width: 99%;
+	}
+	.OurStory-text,
+	.HowItWorks-text {
+		padding: 0em 1em;
+	}
+	.OurStory-text h2,
+	.HowItWorks-text h2 {
+		font-size: 18px;
+		padding-left: 0em;
+	}
+	.OurStory-text p,
+	.HowItWorks-text p {
+		font-size: 12px;
+		line-height: 1.5;
+	}
+	.OurStory {
+		margin-top: 3em;
+	}
+	.HowItWorks {
+		margin-top: 2em;
+		margin-bottom: 4em;
+	}
+}
+@media only screen and (max-width: 375px) {
+	.OurStory-text h2,
+	.HowItWorks-text h2 {
+		font-size: 16px;
+	}
+	.OurStory-text p,
+	.HowItWorks-text p {
+		font-size: 11px;
+	}
+	.OurStory {
+		margin-top: 2.5em;
+	}
+	.OurStory img,
+	.HowItWorks img {
+		object-fit: contain;
+		height: auto;
+	}
+}
+@media only screen and (max-width: 320px) {
+	.OurStory-text h2,
+	.HowItWorks-text h2 {
+		font-size: 14px;
+	}
+	.OurStory-text p,
+	.HowItWorks-text p {
+		font-size: 10px;
+	}
+	.OurStory {
+		margin-top: 2.5em;
+	}
+	.HowItWorks {
+		margin-top: 1.7em;
+		margin-bottom: 3em;
+	}
+}
