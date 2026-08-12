@@ -2,8 +2,8 @@ const express = require('express')
 const cors = require('cors')
 const ExcelJS = require('exceljs')
 const path = require('path')
-const app = express()
 
+const app = express()
 app.use(cors())
 app.use(express.json())
 
@@ -11,7 +11,7 @@ const excelFilePath = path.join(__dirname, 'messages.xlsx')
 
 app.post('/api/contact', async (req, res) => {
   const { fullName, email, subject, message } = req.body
-  const timestamp = new Date().toISOString()
+  const headers = ['Full Name', 'Email', 'Subject', 'Message']
 
   const workbook = new ExcelJS.Workbook()
   let worksheet
@@ -21,43 +21,53 @@ app.post('/api/contact', async (req, res) => {
     worksheet = workbook.getWorksheet('Submissions')
   } catch (error) {
     worksheet = workbook.addWorksheet('Submissions')
-    const headerRow = worksheet.addRow([
-      'Timestamp',
-      'Full Name',
-      'Email Address',
-      'Subject',
-      'Message',
-    ])
-    headerRow.font = { bold: true, color: { rgb: 'FFFFFF' } }
-    headerRow.fill = {
-      type: 'pattern',
-      pattern: 'solid',
-      fgColor: { rgb: '1B365D' },
-    }
+    const headerRow = worksheet.addRow(headers)
+
+    headerRow.eachCell((cell) => {
+      cell.font = { bold: true, size: 22, color: { argb: 'FF000000' } }
+      cell.fill = {
+        type: 'pattern',
+        pattern: 'solid',
+        fgColor: { argb: 'FF548CD5' },
+      }
+      cell.border = {
+        top: { style: 'thin' },
+        left: { style: 'thin' },
+        bottom: { style: 'thin' },
+        right: { style: 'thin' },
+      }
+      cell.alignment = { horizontal: 'center' }
+    })
   }
 
-  const nextRowNumber = worksheet.actualRowCount + 1
-  worksheet.insertRow(nextRowNumber, [
-    timestamp,
-    fullName,
-    email,
-    subject,
-    message,
-  ])
+  const dataRow = worksheet.addRow([fullName, email, subject, message])
 
-  worksheet.columns.forEach((column) => {
-    let maxLen = 0
-    column.eachCell({ includeEmpty: true }, (cell) => {
-      const cellLen = cell.value ? cell.value.toString().length : 0
-      if (cellLen > maxLen) maxLen = cellLen
+  dataRow.eachCell((cell) => {
+    cell.font = { size: 11, color: { argb: 'FF000000' } }
+    cell.alignment = { wrapText: true, vertical: 'top' }
+  })
+
+  const minWidths = [17, 10, 12, 15]
+
+  const maxColumnWidth = 80
+
+  worksheet.columns.forEach((column, i) => {
+    let maxLength = minWidths[i]
+
+    column.eachCell({ includeEmpty: true }, (cell, rowNumber) => {
+      if (rowNumber === 1) return
+      const cellText = cell.value ? cell.value.toString() : ''
+      if (cellText.length > maxLength) {
+        maxLength = cellText.length
+      }
     })
-    column.width = Math.max(maxLen + 3, 12)
+
+    column.width = Math.min(maxLength + 1, maxColumnWidth)
   })
 
   await workbook.xlsx.writeFile(excelFilePath)
 
-  console.log(`Saved Excel row #${nextRowNumber} for ${fullName}`)
-  res.status(200).send('Message Saved natively to Excel!')
+  res.status(200).send('Saved to Excel!')
 })
 
-app.listen(3000, () => console.log('Mock Excel backend running on port 3000'))
+app.listen(3000, () => console.log('Excel backend running on port 3000'))
