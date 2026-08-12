@@ -28,11 +28,11 @@ app.post('/api/contact', async (req, res) => {
       'Subject',
       'Message',
     ])
-    headerRow.font = { bold: true, color: { argb: 'FFFFFF' } }
+    headerRow.font = { bold: true, color: { rgb: 'FFFFFF' } }
     headerRow.fill = {
       type: 'pattern',
       pattern: 'solid',
-      fgColor: { argb: '1B365D' },
+      fgColor: { rgb: '1B365D' },
     }
   }
 
