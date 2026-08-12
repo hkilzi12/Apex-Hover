@@ -39,17 +39,35 @@
           />
         </a>
       </div>
+
+      <button
+        class="HamburgerBtn"
+        aria-label="Toggle navigation menu"
+        aria-expanded="false"
+      >
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
+
+      <div class="GlobalHeaderMenu">
+        <h2><a href="Home.html">Home</a></h2>
+        <h2><a href="Shop.html">Shop</a></h2>
+        <h2><a href="Sale.html">Sale</a></h2>
+        <h2><a href="Cart.html">Cart</a></h2>
+        <h2><a href="FAQ.html">FAQ</a></h2>
+        <h2><a href="Support.html">Support</a></h2>
+      </div>
     </header>
 
-    <div class="GlobalHeaderMenu">
-      <h2><a href="Shop.html">Shop</a></h2>
-      <h2><a href="Sale.html">Sale</a></h2>
-      <h2><a href="Cart.html">Cart</a></h2>
-      <h2><a href="FAQ.html">FAQ</a></h2>
-      <h2><a href="Support.html">Support</a></h2>
-    </div>
-
     <main>
+      <nav
+        id="breadcrumb-container"
+        data-breadcrumb-parent=""
+        data-breadcrumb-urls=""
+        data-breadcrumb-current="UrbanDrift V2"
+      ></nav>
+
       <div class="ProductGrid">
         <div class="ProductBox a">
           <img
@@ -148,5 +166,6 @@
         </div>
       </div>
     </footer>
+    <script src="Assets/JavaScript/Global.js"></script>
   </body>
 </html>

@@ -1,286 +1,297 @@
 .SupportGrid {
-	display: grid;
-	width: 40%;
-	grid-template: 4em 8em 4em 8em 4em 8em auto / repeat(2, 1fr);
-	justify-content: center;
-	column-gap: 0em;
-	row-gap: 0em;
-	margin: 7em auto 9em;
+  display: grid;
+  width: 40%;
+  grid-template: 4em 8em 4em 8em 4em 8em auto / repeat(2, 1fr);
+  justify-content: center;
+  column-gap: 0em;
+  row-gap: 0em;
+  margin: 7em auto 9em;
 }
 
 .SupportBox {
-	display: grid;
-	height: auto;
-	justify-content: center;
-	border: solid 1px #12233c;
-	--input-height: 3em;
+  display: grid;
+  height: auto;
+  justify-content: center;
+  border: solid 1px #12233c;
+  --input-height: 3em;
 }
+
 .SupportBox.a h2,
 .SupportBox.c h2,
 .SupportBox.e h2 {
-	font-size: 25px;
-	margin: 0em;
-	align-content: center;
-	justify-content: center;
+  font-size: 25px;
+  margin: 0em;
+  align-content: center;
+  justify-content: center;
 }
+
 .SupportBox.a {
-	grid-row: 1 / span 1;
-	grid-column: 1 / span 1;
-	background-color: #12233c;
-	color: #fefefd;
+  grid-row: 1 / span 1;
+  grid-column: 1 / span 1;
+  background-color: #12233c;
+  color: #fefefd;
 }
 
 .SupportBox.b {
-	grid-row: 2 / span 1;
-	grid-column: 1 / span 1;
-	justify-content: stretch;
-	align-content: start;
-	text-align: left;
-	padding: 0.5em 1em;
+  grid-row: 2 / span 1;
+  grid-column: 1 / span 1;
+  justify-content: stretch;
+  align-content: start;
+  text-align: left;
+  padding: 0.5em 1em;
 }
 
 .SupportBox.b h3 {
-	margin: 0em;
-	font-size: 20px;
-	padding-top: 0.3em;
-	padding-bottom: 0.3em;
+  margin: 0em;
+  font-size: 20px;
+  padding-top: 0.3em;
+  padding-bottom: 0.3em;
 }
 
 .SupportBox.b p {
-	margin: 0em;
-	padding-top: 0.2em;
-	height: auto;
+  margin: 0em;
+  padding-top: 0.2em;
+  height: auto;
 }
 
 .SupportBox.c {
-	grid-row: 3 / span 1;
-	grid-column: 1 / span 1;
-	background-color: #12233c;
-	color: #fefefd;
+  grid-row: 3 / span 1;
+  grid-column: 1 / span 1;
+  background-color: #12233c;
+  color: #fefefd;
 }
 
 .SupportBox.d {
-	grid-row: 4 / span 1;
-	grid-column: 1 / span 1;
-	justify-content: stretch;
-	align-content: start;
-	text-align: left;
-	padding: 1em 1em;
+  grid-row: 4 / span 1;
+  grid-column: 1 / span 1;
+  justify-content: stretch;
+  align-content: start;
+  text-align: left;
+  padding: 1em 1em;
 }
 
 .SupportBox.d p {
-	margin: 0em;
-	height: 1.6em;
+  margin: 0em;
+  height: 1.6em;
 }
 
 .SupportBox.e {
-	grid-row: 5 / span 1;
-	grid-column: 1 / span 1;
-	background-color: #12233c;
-	color: #fefefd;
+  grid-row: 5 / span 1;
+  grid-column: 1 / span 1;
+  background-color: #12233c;
+  color: #fefefd;
 }
 
 .SupportBox.f {
-	grid-row: 6 / span 1;
-	grid-column: 1 / span 1;
-	justify-content: stretch;
-	align-content: start;
-	text-align: left;
-	padding: 1em 1em;
+  grid-row: 6 / span 1;
+  grid-column: 1 / span 1;
+  justify-content: stretch;
+  align-content: start;
+  text-align: left;
+  padding: 1em 1em;
 }
 
 .SupportBox.f p {
-	margin: 0em;
-	height: 1.6em;
+  margin: 0em;
+  height: 1.6em;
 }
 
 .SupportBox.g {
-	grid-row: 1 / span 6;
-	grid-column: 2 / span 1;
-	justify-content: stretch;
-	border-left: none;
+  grid-row: 1 / span 6;
+  grid-column: 2 / span 1;
+  justify-content: stretch;
+  border-left: none;
 }
 
 .SupportBox.g h2 {
-	text-align: center;
-	padding-top: 0.2em;
-	font-size: 28px;
-	margin-bottom: 0em;
+  text-align: center;
+  padding-top: 0.2em;
+  font-size: 28px;
+  margin-bottom: 0em;
+}
+textarea {
+  width: 100%;
+  min-height: 80px;
+  max-height: 250px;
+  resize: none;
+  overflow-y: hidden;
+  box-sizing: border-box;
+  border: 1px solid black;
+  border-radius: 5px;
+  font-family: 'Courier New', monospace;
+  font-size: 16px;
+  padding: 10px;
 }
 
 .SupportBox form {
-	display: flex;
-	flex-direction: column;
-	gap: 0.5em;
-	margin: 1.5em auto;
-	width: 85%;
-	height: auto;
-	box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+  margin: 1.5em auto;
+  width: 85%;
+  height: auto;
+  box-sizing: border-box;
 }
 
 .SupportBox input {
-	padding: 0.5em;
-	border: 1px solid black;
-	border-radius: 5px;
-	font-family: "Courier New", monospace;
-	font-size: 16px;
-	box-sizing: border-box;
+  padding: 0.5em;
+  border: 1px solid black;
+  border-radius: 5px;
+  font-family: 'Courier New', monospace;
+  font-size: 16px;
+  box-sizing: border-box;
 }
 
-.SupportBox input[name="full-name"],
-.SupportBox input[name="email"],
-.SupportBox input[name="subject"] {
-	height: var(--input-height);
-}
-
-.SupportBox input[name="message"] {
-	height: calc(var(--input-height) * 3.7);
+.SupportBox input[name='full-name'],
+.SupportBox input[name='email'],
+.SupportBox input[name='subject'] {
+  height: var(--input-height);
 }
 
 .SupportBox button {
-	padding: 0.5em;
-	height: var(--input-height);
-	font-size: 16px;
-	background-color: #0883b6;
-	border: 1px solid black;
-	border-radius: 5px;
-	cursor: pointer;
-	font-family: "Courier New", monospace;
-	color: #fefefd;
+  padding: 0.5em;
+  height: var(--input-height);
+  font-size: 16px;
+  background-color: #0883b6;
+  border: 1px solid black;
+  border-radius: 5px;
+  cursor: pointer;
+  font-family: 'Courier New', monospace;
+  color: #fefefd;
 }
 
 .SupportBox button:hover {
-	background-color: grey;
-	transition: background-color 0.2s ease;
+  background-color: grey;
+  transition: background-color 0.2s ease;
 }
 
 @media only screen and (max-width: 1440px) {
-	.SupportGrid {
-		width: 60%;
-	}
-	.SupportBox form {
-		width: 75%;
-	}
+  .SupportGrid {
+    width: 60%;
+  }
+  .SupportBox form {
+    width: 75%;
+  }
 }
 @media only screen and (max-width: 1024px) {
-	.SupportGrid {
-		width: 70%;
-	}
-	.SupportBox form {
-		width: 80%;
-	}
-	.SupportBox {
-		--input-height: 2.7em;
-	}
-	.SupportBox button {
-		padding: 0.5em;
-	}
+  .SupportGrid {
+    width: 70%;
+  }
+  .SupportBox form {
+    width: 80%;
+  }
+  .SupportBox {
+    --input-height: 2.7em;
+  }
+  .SupportBox button {
+    padding: 0.5em;
+  }
 }
 @media only screen and (max-width: 768px) {
-	.SupportGrid {
-		width: 80%;
-		margin: 6em auto 8em;
-	}
-	.SupportBox form {
-		width: 85%;
-	}
-	.SupportBox {
-		--input-height: 2.4em;
-	}
-	.SupportBox h2 {
-		font-size: 25px;
-	}
-	.SupportBox.b h3 {
-		font-size: 20px;
-		padding-top: 0em;
-		padding-bottom: 0.2em;
-	}
-	.SupportBox.b p {
-		height: auto;
-	}
+  .SupportGrid {
+    width: 80%;
+    margin: 6em auto 8em;
+  }
+  .SupportBox form {
+    width: 85%;
+  }
+  .SupportBox {
+    --input-height: 2.4em;
+  }
+  .SupportBox h2 {
+    font-size: 25px;
+  }
+  .SupportBox.b h3 {
+    font-size: 20px;
+    padding-top: 0em;
+    padding-bottom: 0.2em;
+  }
+  .SupportBox.b p {
+    height: auto;
+  }
 }
 @media only screen and (max-width: 425px) {
-	.SupportGrid {
-		width: 82%;
-		margin: 4em auto 5em;
-	}
-	.SupportBox form {
-		width: 85%;
-	}
-	.SupportBox {
-		--input-height: 2.2em;
-	}
-	.SupportBox h2 {
-		font-size: 24px;
-	}
-	.SupportBox.g h2 {
-		margin-top: 0.6em;
-	}
+  .SupportGrid {
+    width: 82%;
+    margin: 4em auto 5em;
+  }
+  .SupportBox form {
+    width: 85%;
+  }
+  .SupportBox {
+    --input-height: 2.2em;
+  }
+  .SupportBox h2 {
+    font-size: 24px;
+  }
+  .SupportBox.g h2 {
+    margin-top: 0.6em;
+  }
 
-	.SupportBox.a {
-		grid-row: 1 / span 1;
-		grid-column: 1 / span 2;
-	}
+  .SupportBox.a {
+    grid-row: 1 / span 1;
+    grid-column: 1 / span 2;
+  }
 
-	.SupportBox.b {
-		grid-row: 2 / span 1;
-		grid-column: 1 / span 2;
-	}
+  .SupportBox.b {
+    grid-row: 2 / span 1;
+    grid-column: 1 / span 2;
+  }
 
-	.SupportBox.c {
-		grid-row: 3 / span 1;
-		grid-column: 1 / span 2;
-	}
+  .SupportBox.c {
+    grid-row: 3 / span 1;
+    grid-column: 1 / span 2;
+  }
 
-	.SupportBox.d {
-		grid-row: 4 / span 1;
-		grid-column: 1 / span 2;
-	}
+  .SupportBox.d {
+    grid-row: 4 / span 1;
+    grid-column: 1 / span 2;
+  }
 
-	.SupportBox.e {
-		grid-row: 5 / span 1;
-		grid-column: 1 / span 2;
-	}
+  .SupportBox.e {
+    grid-row: 5 / span 1;
+    grid-column: 1 / span 2;
+  }
 
-	.SupportBox.f {
-		grid-row: 6 / span 1;
-		grid-column: 1 / span 2;
-	}
+  .SupportBox.f {
+    grid-row: 6 / span 1;
+    grid-column: 1 / span 2;
+  }
 
-	.SupportBox.g {
-		grid-row: 7 / span 1;
-		grid-column: 1 / span 2;
-		border-left: solid 1px #12233c;
-		border-top: none;
-	}
+  .SupportBox.g {
+    grid-row: 7 / span 1;
+    grid-column: 1 / span 2;
+    border-left: solid 1px #12233c;
+    border-top: none;
+  }
 }
 @media only screen and (max-width: 375px) {
-	.SupportGrid {
-		width: 90%;
-		margin: 3em auto;
-	}
-	.SupportBox h2 {
-		font-size: 22px;
-	}
-	.SupportBox form {
-		width: 90%;
-	}
-	.SupportBox {
-		--input-height: 2.2em;
-	}
-	.SupportBox input {
-		font-size: 15px;
-	}
-	.SupportBox.g h2 {
-		margin-top: 0.6em;
-		font-size: 25px;
-	}
+  .SupportGrid {
+    width: 90%;
+    margin: 3em auto;
+  }
+  .SupportBox h2 {
+    font-size: 22px;
+  }
+  .SupportBox form {
+    width: 90%;
+  }
+  .SupportBox {
+    --input-height: 2.2em;
+  }
+  .SupportBox input {
+    font-size: 15px;
+  }
+  .SupportBox.g h2 {
+    margin-top: 0.6em;
+    font-size: 25px;
+  }
 }
 @media only screen and (max-width: 320px) {
-	.SupportBox {
-		--input-height: 2em;
-	}
-	.SupportBox input {
-		font-size: 14px;
-	}
+  .SupportBox {
+    --input-height: 2em;
+  }
+  .SupportBox input {
+    font-size: 14px;
+  }
 }
