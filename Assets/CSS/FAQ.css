@@ -5,6 +5,7 @@
   margin: 4em 0em 10em;
 }
 
+/* ----------------------------- Header and Text ---------------------------- */
 .divItem {
   text-align: center;
   width: 40%;
@@ -20,6 +21,7 @@
   font-size: 22px;
 }
 
+/* --------------------------- Drop Down Questions -------------------------- */
 .DetailsContainer {
   width: 30%;
   height: auto;
@@ -74,6 +76,10 @@ details p {
 .divItem a:visited {
   color: inherit;
 }
+
+/* -------------------------------------------------------------------------- */
+/*                   Media Queries for mobile responsiveness                  */
+/* -------------------------------------------------------------------------- */
 
 @media only screen and (max-width: 1440px) {
   .divContainer {

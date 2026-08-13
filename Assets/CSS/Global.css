@@ -47,7 +47,10 @@ summary {
   display: none;
 }
 
-/* #region Body Section */
+/* -------------------------------------------------------------------------- */
+/*                                Body Section                                */
+/* -------------------------------------------------------------------------- */
+
 #breadcrumb-container {
   padding-left: 1.5em;
   padding-top: 0.5em;
@@ -104,9 +107,10 @@ summary {
     font-size: 11px;
   }
 }
-/* #endregion Body Section */
 
-/* #region Global Header Section*/
+/* -------------------------------------------------------------------------- */
+/*                               Header Section                               */
+/* -------------------------------------------------------------------------- */
 
 .GlobalHeaderLogo {
   display: flex;
@@ -189,6 +193,7 @@ summary {
     transform 0.3s ease,
     opacity 0.3s ease;
 }
+/* #region Header and Body Media Queries */
 @media only screen and (max-width: 1024px) {
   .GlobalHeaderLogo img {
     width: 15em;
@@ -200,7 +205,6 @@ summary {
     font-size: 10px;
   }
 }
-
 @media only screen and (max-width: 768px) {
   .GlobalHeaderLogo img {
     width: 12em;
@@ -212,7 +216,6 @@ summary {
     padding-block: 1.1em;
   }
 }
-
 @media only screen and (max-width: 440px) {
   body {
     padding-top: var(--header-height, 0px);
@@ -303,7 +306,6 @@ summary {
     height: 100%;
   }
 }
-
 @media only screen and (max-width: 425px) {
   header {
     height: 76.39px;
@@ -321,7 +323,6 @@ summary {
     padding-block: 1.25em;
   }
 }
-
 @media only screen and (max-width: 375px) {
   body {
     padding-top: var(--header-height, 0px);
@@ -354,9 +355,13 @@ summary {
     width: 9em;
   }
 }
-/*  #endregion Global Header Section*/
 
-/*  #region Global Footer Section*/
+/* #endregion Header and Body Media Queries */
+
+/* -------------------------------------------------------------------------- */
+/*                               Footer Section                               */
+/* -------------------------------------------------------------------------- */
+
 .GlobalFooterMenu {
   display: flex;
   background-color: #0d1b33;
@@ -369,6 +374,7 @@ summary {
   border-top: 1px solid #1a2f52;
 }
 
+/* ------------------------ Footer Title and Content ------------------------ */
 .GlobalFooterBlock {
   display: flex;
   flex-direction: column;
@@ -425,6 +431,7 @@ summary {
   color: #fefefd;
 }
 
+/* ------------------------------- Footer Form ------------------------------ */
 .GlobalFooterBlock form {
   display: flex;
   flex-direction: column;
@@ -459,6 +466,9 @@ summary {
 .GlobalFooterBlock:nth-child(3) {
   width: 400px;
 }
+
+/* #region Footer Media Queries */
+
 @media only screen and (max-width: 1440px) {
   .GlobalFooterBlock form {
     margin: 1.3em 0em;
@@ -467,7 +477,6 @@ summary {
     width: 260px;
   }
 }
-
 @media only screen and (max-width: 1024px) {
   .GlobalFooterBlock {
     flex-grow: 1;
@@ -491,7 +500,6 @@ summary {
     padding-top: 0.5em;
   }
 }
-
 @media only screen and (max-width: 768px) {
   .GlobalFooterBlock {
     flex-grow: 1;
@@ -530,7 +538,6 @@ summary {
     height: 24px;
   }
 }
-
 @media only screen and (max-width: 440px) {
   .GlobalFooterMenu {
     padding: 0.5em 0em 0em;
@@ -603,7 +610,6 @@ summary {
     max-height: 26px;
   }
 }
-
 @media only screen and (max-width: 375px) {
   .GlobalFooterMenu {
     padding: 0.5em 0em 0em;
@@ -666,4 +672,5 @@ summary {
     max-height: 1.4em;
   }
 }
-/*  #endregion Global Footer Section*/
+
+/* #endregion Footer Media Queries */

@@ -1,4 +1,7 @@
-//#region Dropdown Menu
+/* -------------------------------------------------------------------------- */
+/*                              Drop Down Header                              */
+/* -------------------------------------------------------------------------- */
+
 document.addEventListener('DOMContentLoaded', () => {
   const hamburgerBtn = document.querySelector('.HamburgerBtn')
   const navMenu = document.querySelector('.GlobalHeaderMenu')
@@ -32,9 +35,11 @@ document.addEventListener('DOMContentLoaded', () => {
     })
   }
 })
-//#endregion Dropdown Menu
 
-//#region Breadcrumb
+/* -------------------------------------------------------------------------- */
+/*                                 Breadcrumbs                                */
+/* -------------------------------------------------------------------------- */
+
 document.addEventListener('DOMContentLoaded', () => {
   const container = document.getElementById('breadcrumb-container')
   if (!container) return
@@ -66,9 +71,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
   container.innerHTML = html
 })
-//#endregion Breadcrumb
 
-//#region Contact Form Submission
+/* -------------------------------------------------------------------------- */
+/*                         Contact Us Form Submission                         */
+/* -------------------------------------------------------------------------- */
+
 const form = document.querySelector(`#mock-contact-form`)
 
 form.addEventListener('submit', async (e) => {
@@ -100,4 +107,3 @@ tx.addEventListener('input', function () {
   this.style.height = 'auto'
   this.style.height = this.scrollHeight + 'px'
 })
-//#endregion Contact Form Submission

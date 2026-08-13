@@ -1,3 +1,4 @@
+/* ------------------------------- Entire Grid ------------------------------ */
 .ProductGrid {
   display: grid;
   width: 45%;
@@ -10,6 +11,8 @@
 .ProductBox {
   text-align: left;
 }
+
+/* -------------------------------- Image Box ------------------------------- */
 .ProductBox.a {
   grid-row: 1 / span 3;
   grid-column: 1 / span 1;
@@ -24,6 +27,8 @@
   width: calc(100% - 2px);
   height: auto;
 }
+
+/* ------------------------- Title, Price, and Space ------------------------ */
 .ProductBox.b {
   grid-row: 1 / span 1;
   grid-column: 2 / span 1;
@@ -47,6 +52,8 @@
 .ProductBox.b h3 {
   padding-left: 0.5rem;
 }
+
+/* ------------------------------- Form Button ------------------------------ */
 .ProductBox.c {
   grid-row: 2 / span 1;
   grid-column: 2 / span 1;
@@ -58,7 +65,6 @@
   flex-direction: column;
   width: 90%;
 }
-
 .ProductBox.c button {
   height: 3em;
   background-color: lightgrey;
@@ -69,12 +75,12 @@
   font-size: 18px;
   min-height: 44px;
 }
-
 .ProductBox.c button:hover {
   background-color: grey;
   transition: background-color 0.2s ease;
 }
 
+/* ------------------------ Information and Shipping ------------------------ */
 .ProductBox.d {
   grid-row: 3 / span 1;
   grid-column: 2 / span 1;
@@ -82,38 +88,35 @@
   overflow-y: auto;
   height: 195.96px;
 }
-
 details {
   width: 100%;
   margin: 0;
   padding: 0;
 }
-
 summary {
   cursor: pointer;
   font-weight: bold;
   padding: 0.6em;
 }
-
 details p {
   padding: 0.8em;
   margin: 0;
 }
-
 .DetailsInformation {
   border: 1px solid black;
   border-right: none;
   border-left: none;
 }
-
 .DetailsShipping {
   border-bottom: 1px solid black;
 }
-
 ul {
   margin-top: 0.3em;
 }
 
+/* -------------------------------------------------------------------------- */
+/*                   Media Queries for Mobile Responsiveness                  */
+/* -------------------------------------------------------------------------- */
 @media only screen and (max-width: 1440px) {
   .ProductGrid {
     width: 75%;

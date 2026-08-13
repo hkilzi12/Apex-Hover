@@ -1,3 +1,4 @@
+/* ----------------------------- Header and Text ---------------------------- */
 h1 {
   padding-left: 1em;
   font-size: 40px;
@@ -9,6 +10,8 @@ p {
   font-size: 22px;
   margin-bottom: 0em;
 }
+
+/* ------------------------------ Products Grid ----------------------------- */
 .SaleGrid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 30em));
@@ -27,36 +30,33 @@ p {
   border: solid 1px rgb(199, 199, 199);
   border-radius: 10px;
 }
-
 .SaleBox:hover {
   box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.15);
 }
 
+/* ------------------------------ Product Image ----------------------------- */
 .SaleBox-img-link {
   display: block;
 }
-
 .SaleBox-img-link img {
   width: 100%;
   height: auto;
   display: block;
   border-radius: 10px;
 }
-
 .SaleBox-info {
   border-top: solid 1px rgb(199, 199, 199);
 }
-
 .SaleBox a {
   display: block;
   color: inherit;
   text-decoration: none;
 }
-
 .SaleBox a:visited {
   color: inherit;
 }
 
+/* ------------------------------ Product Text ------------------------------ */
 .SaleBox h2 {
   text-align: Left;
   margin-top: 0.3em;
@@ -64,7 +64,6 @@ p {
   font-size: 20px;
   padding-left: 0.8em;
 }
-
 .SaleBox p {
   text-align: Left;
   margin-bottom: 0.3em;
@@ -123,7 +122,6 @@ p {
     margin-top: 0.8em;
   }
 }
-
 @media only screen and (max-width: 375px) {
   p {
     font-size: 16px;
